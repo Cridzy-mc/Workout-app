@@ -22,7 +22,7 @@ cat <<'HEAD'
 </head>
 <body>
 HEAD
-cat src/app.html
+sed 's#https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js#vendor/three.min.js#' src/app.html
 cat <<'TAIL'
 <script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});</script>
 </body>
